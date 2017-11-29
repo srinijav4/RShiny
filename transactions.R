@@ -1,0 +1,17 @@
+options(java.parameters = "-Xmx8192m")
+library(rJava)
+library(RJDBC)
+library(dplyr)
+library(reshape2)
+library(data.table)
+library(ggplot2)
+library(ggthemes)
+library(scales)
+
+appts<-read.csv("D:/Rcodes/Shiny/PId_Appts.csv",stringsAsFactors = F)
+vn_calls<- read.csv("D:/Rcodes/Shiny/VN_Appts.csv",stringsAsFactors = F)
+subscriptions<- read.csv("D:/Rcodes/Shiny/Subscriptions.csv",stringsAsFactors = F)
+
+appts<-subset(appts,appts$country != "India" & appts$country != "")
+vn_calls<-subset(vn_calls,vn_calls$country != "India" & vn_calls$country != "")
+subscriptions<-subset(subscriptions,subscriptions$country != "India" & subscriptions$country != "")
