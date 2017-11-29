@@ -732,13 +732,5 @@ tag
 shinyApp(ui,server)
 
 
-# devtools::install_github('hadley/ggplot2')
-        
-
-
-
-
-
-
 
 
