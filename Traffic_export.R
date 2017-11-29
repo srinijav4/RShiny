@@ -13,6 +13,8 @@ library(lubridate)
 library(zoo)
 library(dplyr)
 
+
+#### Takes token file for GA ###
 rga.open(instance = "ga", where="D:/Rcodes/Shiny/ga.rga")
 A<-as.yearmon(Sys.Date())
 
